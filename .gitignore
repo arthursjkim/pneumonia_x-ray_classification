@@ -5,7 +5,7 @@
 .DS_Store
 
 # Pycharm/IDEs
-.__pycache__/
+tools/__pycache__/
 .idea/
 
 # Saved Models
