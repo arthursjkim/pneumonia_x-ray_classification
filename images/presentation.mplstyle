@@ -12,6 +12,12 @@ axes.titlesize : 19
 axes.titleweight: bold
 axes.labelsize : 15
 axes.labelweight: bold
+axes.prop_cycle: cycler('color', ['tomato', 'sandybrown', 'goldenrod', 'olive', 'darkcyan', 'midnightblue', 'rebeccapurple', 'darkmagenta', 'mediumorchid', 'maroon'])
+
+# Spines
+axes.spines.top: False
+axes.spines.right: False
+
 
 ### LINES
 lines.linewidth : 3.0
