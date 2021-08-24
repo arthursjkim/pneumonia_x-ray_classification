@@ -15,15 +15,14 @@ def count_files(paths):
         # Initialize running count for subset and count files
         subtotal = 0
         for dirname in os.listdir(path):
-            key = os.path.basename(path) + '_' + dirname.lower()
             dirtotal = len(os.listdir(os.path.join(path, dirname)))
 
             # Add subdirectory totals to subset total and counts to dict
             subtotal += dirtotal
-            counts[key] = dirtotal
             print(f'\t{dirname}: {dirtotal}')
         print(f'\n\tSUBTOTAL: {subtotal}')
         total += subtotal
+        counts[os.path.basename(path)] = subtotal
 
     # Display running total
     print('-' * 25)
