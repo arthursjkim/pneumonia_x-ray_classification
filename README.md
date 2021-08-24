@@ -1,4 +1,4 @@
-[Doctor_hold_chest_xray](images/chest-x-ray.jpeg)
+[Doctor_hold_chest_xray](./images/chest-x-ray.jpeg)
 # Pneumonia Detection with Neural Networks
 
 Arthur Kim, Mia Fryer, Ian Sharff
