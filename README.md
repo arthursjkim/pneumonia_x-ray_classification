@@ -23,7 +23,7 @@
 ## Overview
 According to the Center for Disease Control and Presentation (CDC), [15.7 out of 1000](https://www.cdc.gov/media/releases/2015/p0225-pneumonia-hospitalizations.html) children are diagnosed with pneumonia in a given year, and [~326K children ages 1-4 in the US died in 2018](https://www.cdc.gov/nchs/data/hus/2019/007-508.pdf) from pneumonia and influenza, the third leading medical-related causes of death. In addition, the Association of American Medical Colleges (AAMC) projected that the shortage of physicians in non-primary and non-surgical specialties (i.e. radiology) can reach up to [42,000 by 2033](https://www.aamc.org/news-insights/press-releases/new-aamc-report-confirms-growing-physician-shortage) in the US. Given that pneumonia is still a prevalent issue and that there may be a shortage of physicians who can diagnose patients, healthcare organizations may experience delays in care.
 
-Pneumonia can be diagnosed in several ways such as observing clinical features and symptoms, blood tests, and chest X-rays. Studies, such as [Htun, T.P., Sun, Y., Chua, H.L. et al.](https://www.nature.com/articles/s41598-019-44145-y), have stated that chest X-rays are the "gold standard tool for diagnosing pneumonia...whic can distinguish pneumonia from other respiratory tract infection." Based on another [study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6377225/), the sensitivity, the ability of a test to correctly identify those with diease or true positive rate, of plain chest radiography in detection of pneumonia is 38-76%, and it is even less accurate when determining the etiology of pneumonia [(42-73%)](https://emedicine.medscape.com/article/1926980-overview#a1).
+Pneumonia can be diagnosed in several ways such as observing clinical features and symptoms, blood tests, and chest X-rays. Studies, such as [Htun, T.P., Sun, Y., Chua, H.L. et al.](https://www.nature.com/articles/s41598-019-44145-y), have stated that chest X-rays are the "gold standard tool for diagnosing pneumonia...which can distinguish pneumonia from other respiratory tract infection." Based on another [study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6377225/), the sensitivity, the ability of a test to correctly identify those with diease or true positive rate, of plain chest radiography in detection of pneumonia is 38-76%, and it is even less accurate when determining the etiology of pneumonia [(42-73%)](https://emedicine.medscape.com/article/1926980-overview#a1).
 
 In this project, we analyzed chest X-ray images of the lungs of children less than 5 years old and developed a image classifier model that can accurately classify if an X-ray image indicates that the child has pneumonia. By utilizing this model, health systems can accurately diagnose patients quickly and effectively, without the need of a physician. In addition, the model could lower the need for additional tests, such as ulstrasounds and CT scans, which could increase costs.
 
@@ -36,6 +36,9 @@ The dataset includes ~5.9K chest x-ray images (~4.3K with pneumonia and 1.6K wit
 The pneumonia positive images can be further categorized to bacteria-related and virus-related pneumonia.
 
 ## Data Preparation
+The images where first sorted into two folders: pneumonia, and normal. The images were then further sorted with a ratio of 60:20:20 in three folders: train, validation, and test. 
+
+Using an image data generator, we recaled the...
 
 ## Model Training and Testing
 
