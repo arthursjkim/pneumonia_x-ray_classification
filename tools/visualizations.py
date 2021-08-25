@@ -7,6 +7,12 @@ import seaborn as sns
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
+from sklearn.metrics import confusion_matrix
+
+ANNOT_KWS = {
+    'size': 18
+}
+
 
 def plot_loss_accuracy(results):
     fig, axes = plt.subplots(1, 2, figsize=(15, 8))
@@ -34,3 +40,39 @@ def plot_loss_accuracy(results):
     axes[1].legend()
 
     return fig
+
+
+def plot_confusion_matrices(model, train_images, test_images, train_labels, test_labels):
+    """Plot confusion matrices for train and test sets"""
+
+    train_pred_labels = (model.predict(train_images) > 0.5).astype('int32')
+    test_pred_labels = (model.predict(test_images) > 0.5).astype('int32')
+
+    train_cm = confusion_matrix(train_labels, train_pred_labels)
+    test_cm = confusion_matrix(test_labels, test_pred_labels)
+
+    fig, axes = plt.subplots(1, 2, figsize=(18, 8))
+
+    sns.heatmap(data=train_cm,
+                cmap='Greens',
+                annot=True,
+                fmt='d',
+                annot_kws=ANNOT_KWS,
+                ax=axes[0]
+                )
+    axes[0].set_title('Training', fontsize=24)
+    axes[0].set_xlabel('Predicted Label')
+    axes[0].set_ylabel('True Label')
+
+    sns.heatmap(data=test_cm,
+                cmap='Blues',
+                annot=True,
+                fmt='d',
+                annot_kws=ANNOT_KWS,
+                ax=axes[1]
+                )
+    axes[1].set_title('Testing', fontsize=24)
+    axes[1].set_xlabel('Predicted Label')
+    axes[1].set_ylabel('True Label')
+
+    plt.show()
