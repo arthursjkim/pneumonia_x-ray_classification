@@ -75,4 +75,4 @@ def plot_confusion_matrices(model, train_images, test_images, train_labels, test
     axes[1].set_xlabel('Predicted Label')
     axes[1].set_ylabel('True Label')
 
-    plt.show()
+    return fig
