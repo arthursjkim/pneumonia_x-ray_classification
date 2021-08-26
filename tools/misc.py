@@ -1,5 +1,6 @@
 import os
 import sys
+import pickle
 
 
 def count_files(paths):
@@ -28,6 +29,17 @@ def count_files(paths):
     print('-' * 25)
     print(f'TOTAL: {total} files')
     return counts
+
+
+def pickle_history(model, filepath):
+    with open(filepath, 'wb') as f:
+        pickle.dump(model.history, f)
+
+
+def unpickle_history(filepath):
+    with open(filepath, 'rb') as f:
+        history = pickle.load(f)
+    return history
 
 
 if __name__ == '__main__':
