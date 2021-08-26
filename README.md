@@ -74,16 +74,17 @@ As for the other models, the following graph shows the recall metric per model.
 
 We found that model X was the best model with the highest recall score.
 
-Given the high recall or sensitivity score, we recommend ACME Health to pilot our model with their physicians and compare the model results with the physicians' diagnoses. We believe that the model can help reduce time it takes to diagnose pneumonia, and allow physicians to reallocate their time into other work. 
+Given the high recall or sensitivity score, we recommend ACME Health to pilot our model with their physicians and compare the model results with the physicians' diagnoses. We believe that the model can help increase pneumonia diagnosis sensitivity, reduce the time it takes to diagnose pneumonia, and allow physicians to reallocate their time into other work. 
 
 ## Next Steps
-Though our model can aid ACME health to diagnose patients without a physician, this may need to be first approved by health insurers, as some reimbursements require a physician's input. 
+Though our model can aid ACME health to diagnose patients without a physician, this may need to be first approved by health insurers, as some reimbursements require a physician's input. In addition, we would like to test or re-train our models on chest X-ray images of people in other ages groups, especially those who are ages 65+ who may be more prone to infection. Finally, we would like to run similar models to detect other respiratory conditions such as chronic obstructive pulmonary disease.
 
 ## Contributors
-- Arthur Kim <br>
-    Github: arthurk2323<br>
+
 - Mia Fryer <br>
     Github: miazfryer<br>
+- Arthur Kim <br>
+    Github: arthurk2323<br>
 - Ian Sharff <br>
     Github: iansharff<br>
     
