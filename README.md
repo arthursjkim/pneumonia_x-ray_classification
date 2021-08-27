@@ -67,7 +67,7 @@ For model 0, the dummy classifier, with fit the model on the train images and la
 
 ### Multi-class 
 
-<ol start="0">
+<ol start="1">
   <li>Neural Network with Dense Layers</li>
   <li>Neural Network with Dense and Dropout Layers</li>
   <li>Convolutional Neural Network1 (CNN)</li>
