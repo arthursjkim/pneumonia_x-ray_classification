@@ -74,6 +74,8 @@ As for the other models, the following graph shows the recall metric per model.
 
 We found that model X was the best model with the highest recall score.
 
+![Model_2_confusion_matrix](./images/cm_model2.jpeg)
+
 Given the high recall or sensitivity score, we recommend ACME Health to pilot our model with their physicians and compare the model results with the physicians' diagnoses. We believe that the model can help increase pneumonia diagnosis sensitivity, reduce the time it takes to diagnose pneumonia, and allow physicians to reallocate their time into other work. 
 
 ## Next Steps
