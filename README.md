@@ -98,7 +98,7 @@ As for the other models, the following graph shows the recall metric per model.
 
 We found that model 5 using VGG19 transfer learning was the best model with the highest recall score.
 
-![Model_bi_confusion_matrix](./images/Multi/confusion.png)
+![Model_bi_confusion_matrix](./images/Multi/confusion_readme.png)
 
 
 ## Next Steps
