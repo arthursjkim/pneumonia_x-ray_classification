@@ -70,7 +70,7 @@ For our analysis, we wanted to focus on the recall metric because we wanted to r
 Our dummy classifier model has a recall of XX%.
 
 As for the other models, the following graph shows the recall metric per model.
-[insert graph]
+![Model_recall](./images/recall_barplot.png)
 
 We found that model X was the best model with the highest recall score.
 
