@@ -94,11 +94,11 @@ Given the high recall or sensitivity score, we recommend ACME Health to pilot ou
 For the multi-class models, the results were expected to have an overall lower recall score since the x-rays between bacterial and viral pneumonia are not nearly as distingushable. The following graph shows the sensitivity/recall score for all the models. 
 
 As for the other models, the following graph shows the recall metric per model.
-![Model_recall](./images/Multi/recall.png)
+![Model_bi recall](./images/Multi/recall.png)
 
 We found that model 5 using VGG19 transfer learning was the best model with the highest recall score.
 
-![Model_2_confusion_matrix](./images/Multi/confusion_matrices/confusion.png)
+![Model_bi_confusion_matrix](./images/Multi/confusion.png)
 
 
 ## Next Steps
