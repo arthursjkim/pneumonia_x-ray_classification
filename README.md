@@ -65,9 +65,10 @@ We tested out X models:
 For model 0, the dummy classifier, with fit the model on the train images and labels, and applied the fitted model to the train data. For models 1-8, we complied and fit the model on the train data, passing in the validation set as well. We used the model to evaluate the test data.
 
 ## Analysis and Conclusions
+### Binary
 For our analysis, we wanted to focus on the recall metric because we wanted to reduce the number of false negatives or wrongly classifying patients as non-pneumonia when in fact they have pneumonia. In the medical field, the term sensitivity is synonymous to recall.
 
-Our dummy classifier model has a recall of XX%.
+Our dummy classifier model has a recall of 72%.
 
 As for the other models, the following graph shows the recall metric per model.
 ![Model_recall](./images/recall_barplot.png)
@@ -77,6 +78,20 @@ We found that model X was the best model with the highest recall score.
 ![Model_2_confusion_matrix](./images/confusion_matrices/cm_model2.png)
 
 Given the high recall or sensitivity score, we recommend ACME Health to pilot our model with their physicians and compare the model results with the physicians' diagnoses. We believe that the model can help increase pneumonia diagnosis sensitivity, reduce the time it takes to diagnose pneumonia, and allow physicians to reallocate their time into other work. 
+
+### Multi-class 
+We further explored the data by spliting the pneumonia files into bacterial and viral infection and the result was expected to have a lower recall score since the x-rays between bacterial and viral pneumonia are not nearly as distingushable. The following graph shows the sensitivity/recall score for all the models. 
+
+
+As for the other models, the following graph shows the recall metric per model.
+![Model_recall](./images/Multi/recall.png)
+
+We found that model X was the best model with the highest recall score.
+
+![Model_2_confusion_matrix](./images/confusion_matrices/cm_model2.png)
+
+Given the high recall or sensitivity score, we recommend ACME Health to pilot our model with their physicians and compare the model results with the physicians' diagnoses. We believe that the model can help increase pneumonia diagnosis sensitivity, reduce the time it takes to diagnose pneumonia, and allow physicians to reallocate their time into other work. 
+
 
 ## Next Steps
 Though our model can aid ACME health to diagnose patients without a physician, this may need to be first approved by health insurers, as some reimbursements require a physician's input. In addition, we would like to test or re-train our models on chest X-ray images of people in other ages groups, especially those who are ages 65+ who may be more prone to infection. Finally, we would like to run similar models to detect other respiratory conditions such as chronic obstructive pulmonary disease.
