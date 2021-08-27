@@ -45,9 +45,10 @@ The pneumonia positive images can be further categorized to bacteria-related and
 ## Data Preparation
 The images where first sorted into two folders: pneumonia and normal. The images were then further sorted with a ratio of 60:20:20 in three folders: train, validation, and test. 
 
-Using an image data generator, we rescaled each pixel by a factor of 1/255, resized the images to (64,64), and changed images to gray scale. We had a different image data generator for train, validation, and test images. We used the generators and the next() funtion to extract the images and corresponding labels. 
+Using an image data generator, we rescaled each pixel by a factor of 1/255, resized the images to (64,64), and changed images to gray scale. We had a different image data generator for train, validation, and test images. We used the generators and the next() funtion to extract the images and corresponding labels. We further explored the data by spliting the pneumonia files into bacterial and viral infection and repeat the same steps to create generatros for train, test and validation data set. 
 
 ## Model Training and Testing
+### Binary
 We tested out X models:
 
 <ol start="0">
@@ -63,6 +64,16 @@ We tested out X models:
 </ol>
 
 For model 0, the dummy classifier, with fit the model on the train images and labels, and applied the fitted model to the train data. For models 1-8, we complied and fit the model on the train data, passing in the validation set as well. We used the model to evaluate the test data.
+
+### Multi-class 
+
+<ol start="0">
+  <li>Neural Network with Dense Layers</li>
+  <li>Neural Network with Dense and Dropout Layers</li>
+  <li>Convolutional Neural Network1 (CNN)</li>
+  <li>Convolutional Neural Network2 (CNN)</li>
+  <li>VGG19 Transfer Learning</li>
+</ol>
 
 ## Analysis and Conclusions
 ### Binary
@@ -80,17 +91,14 @@ We found that model X was the best model with the highest recall score.
 Given the high recall or sensitivity score, we recommend ACME Health to pilot our model with their physicians and compare the model results with the physicians' diagnoses. We believe that the model can help increase pneumonia diagnosis sensitivity, reduce the time it takes to diagnose pneumonia, and allow physicians to reallocate their time into other work. 
 
 ### Multi-class 
-We further explored the data by spliting the pneumonia files into bacterial and viral infection and the result was expected to have a lower recall score since the x-rays between bacterial and viral pneumonia are not nearly as distingushable. The following graph shows the sensitivity/recall score for all the models. 
-
+For the multi-class models, the results were expected to have an overall lower recall score since the x-rays between bacterial and viral pneumonia are not nearly as distingushable. The following graph shows the sensitivity/recall score for all the models. 
 
 As for the other models, the following graph shows the recall metric per model.
 ![Model_recall](./images/Multi/recall.png)
 
-We found that model X was the best model with the highest recall score.
+We found that model 5 using VGG19 transfer learning was the best model with the highest recall score.
 
-![Model_2_confusion_matrix](./images/confusion_matrices/cm_model2.png)
-
-Given the high recall or sensitivity score, we recommend ACME Health to pilot our model with their physicians and compare the model results with the physicians' diagnoses. We believe that the model can help increase pneumonia diagnosis sensitivity, reduce the time it takes to diagnose pneumonia, and allow physicians to reallocate their time into other work. 
+![Model_2_confusion_matrix](./images/Multi/confusion_matrices/confusion.png)
 
 
 ## Next Steps
