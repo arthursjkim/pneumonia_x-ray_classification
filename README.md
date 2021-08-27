@@ -111,3 +111,26 @@ Though our model can aid ACME health to diagnose patients without a physician, t
     Github: iansharff<br>
     
 ## Project Structure
+```
+.
+├── 01_Pneumonia_Classifier_EDA.ipynb
+├── 02_Splitting_Image_Files.ipynb
+├── 03_Binary_Modeling.ipynb
+├── 04_Model_Visualizations.ipynb
+├── 05_Binary_Transfer_Learning.ipynb
+├── 06_Multiclass_Modeling.ipynb
+├── README.md
+├── data
+│   ├── BACTERIA
+│   ├── NORMAL
+│   ├── PNEUMONIA
+│   ├── VIRUS
+│   ├── split
+│   └── split2
+├── images
+├── models
+└── tools
+    ├── __init__.py
+    ├── misc.py
+    └── visualizations.py
+```
